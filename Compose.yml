@@ -1,0 +1,25 @@
+version: '3.9'
+
+services:
+  node:
+    build:
+      context: ./gerencia
+      dockerfile: DockerFile
+    container_name: node
+    ports:
+      - "8000:8000"
+    environment:
+      MONGO_URL: mongodb+srv://gabrielfs0626:gabrields0626@cluster0.rd6bctc.mongodb.net/PsiConnect?retryWrites=true&w=majority
+
+  react:
+    build:
+      context: ./empregaeu
+      dockerfile: DockerFile
+    container_name: react
+    ports:
+      - "3000:3000"
+    depends_on:
+      - node
+
+volumes:
+  mongo-data:

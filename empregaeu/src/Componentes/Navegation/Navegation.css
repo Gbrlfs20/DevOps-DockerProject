@@ -1,0 +1,25 @@
+
+
+    .cabecalho{
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .links ul{
+
+        display: flex;
+        text-decoration: none;
+    }
+
+
+
+   
+
+    ul li {
+
+        text-decoration: none;
+        color: rgb(145, 26, 109);
+        
+    }
